@@ -1,0 +1,116 @@
+body{
+    background:url(https://images.unsplash.com/photo-1421986527537-888d998adb74?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHNwYXJrbGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size:cover;
+}
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    margin-top: -8px;
+    height: 100px;
+    width:98%;
+    background: rgba(0, 0, 0, 0.24);  
+}
+
+   
+    
+ul{
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size:18px;
+    color:white;
+}
+    
+.feedback{
+    margin-right: 30px;
+    padding:5px 9px;
+    transition: .4s ease ;
+
+}
+.feedback:hover{
+    background:red;
+    border:1px solid red;
+    border-width: 0mm;
+    border-radius: 2px;
+}
+.contact{
+    margin-right: 30px;
+    padding:5px 9px;
+    transition: .4s ease ;
+
+}
+.contact:hover{
+    background:red;
+    border:1px solid red;
+    border-width: 0mm;
+    border-radius: 2px;
+
+}
+.services{
+    margin-right: 30px;
+    padding:5px 9px;
+    transition: .4s ease ;
+
+}
+.services:hover{
+    background:red;
+    border:1px solid red;
+    border-width: 0mm;
+    border-radius: 2px;
+}
+.about{
+    margin-right: 30px;
+    padding:5px 9px;
+    transition: .4s ease ;
+
+}
+.about:hover{
+    background:red;
+    border:1px solid red;
+    border-width: 0mm;
+    border-radius: 2px;
+}
+.home{
+    margin-right: 30px;
+    background:red;
+    border:1px solid red;
+    padding:5px 9px;
+    border-width: 0mm;
+    border-radius: 2px;
+}
+.main{
+    text-align:center;
+    color:red;
+    background:white;
+    width:40%;
+    margin-left:30%;
+}
+#increment-btn{
+    margin-left: 35%;
+    background-color: green;
+    height:30px;
+    width: 30%;
+}
+#increment-btn:hover{
+    transform:scale(1.1);   
+}
+#save-btn{
+    margin-top: 5px;
+    margin-left: 35%;
+    background-color: yellow;
+    height:30px;
+    width: 30%;
+}
+#save-btn:hover{
+    transform:scale(1.1);   
+}
+#save-el{
+    margin-top: 5px;
+    margin-left: 35%;
+    background-color: steelblue;
+    height:30px;
+    width: 30%;
+    text-align: center;
+}
