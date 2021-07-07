@@ -114,3 +114,11 @@ ul{
     width: 30%;
     text-align: center;
 }
+#num-el{
+    margin-left: 5%;
+    text-decoration: underline;
+}
+#num2-el{
+    margin-left: 3%;
+    text-decoration: underline;
+}
