@@ -122,3 +122,29 @@ ul{
     margin-left: 3%;
     text-decoration: underline;
 }
+#blackjack {
+   /* margin: 0 0 0 35.2%;*/
+    color:goldenrod;
+    height:30px;
+    width: 30%;
+    text-align:center;
+
+}
+#poker-game {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 400px;
+    width:40%;
+    background:green;
+    padding-top: 10px;
+    padding-left: 35.2%;
+    color:white;
+    font-weight: bold;
+}
+#message-el{
+font-style: italic;
+}
+    
+    
+    
+    
+

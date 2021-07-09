@@ -117,7 +117,7 @@ console.log(myPoints)*/
 }*/
 
 //Calculator
-let num1= 8
+/*let num1= 8
 let num2= 2
 document.getElementById("num-el").textContent= num1
 document.getElementById("num2-el").textContent= num2
@@ -141,4 +141,49 @@ function divide() {
     let division= num1 / num2
     result.textContent= "Result:" + " "+ division
     console.log(division)
+}*/
+
+let firstCard= 9
+let secondCard= 11
+let sum= firstCard+ secondCard
+let isAlive= true
+let hasBlackJack= false
+let message= " "
+if(sum<=20) {
+    message="Do you want to draw a new card?"
 }
+else if (sum=== 21) {
+    message="Wohoo! You've got a Blackjack!"
+     hasBlackJack= true
+}
+else  {
+    message= "You're out of the game!"
+    isAlive= false
+}
+console.log(message)
+
+/*console.log(4===3)
+console.log(4<3)
+console.log(4>3)
+console.log(4<=3)
+console.log(4>=3)*/
+
+//if else statement
+/*let age= 20
+if (age<21) {
+    console.log("You're not allowed to enter the club")
+}
+else {
+    console.log("Welcome!")
+}*/
+
+/*let age = 10
+if (age<100) {
+    console.log("Not eligible")
+}
+else if(age=== 100) {
+    console.log("Here is your birthday card form the king")
+}
+else {
+    console.log("Not eligible, you've already gotten one")
+}*/
