@@ -143,13 +143,26 @@ function divide() {
     console.log(division)
 }*/
 
-let firstCard= 9
+let firstCard= 6
 let secondCard= 11
 let sum= firstCard+ secondCard
 let isAlive= true
 let hasBlackJack= false
 let message= " "
-if(sum<=20) {
+let messageEl= document.getElementById("message-el")
+let sumEl= document.getElementById("sum-el")
+let cardsEl= document.getElementById("cards-el")
+let newCard= 5
+let cards=[ firstCard, secondCard]
+cards.push(newCard)
+
+function startGame() {
+  renderGame()
+}
+
+function renderGame() {
+
+ if(sum<=20) {
     message="Do you want to draw a new card?"
 }
 else if (sum=== 21) {
@@ -160,7 +173,31 @@ else  {
     message= "You're out of the game!"
     isAlive= false
 }
-console.log(message)
+cardsEl.textContent= "Cards: " + cards[0] + " + " + cards[1]
+messageEl.textContent= message
+sumEl.textContent= "Sum: " + sum
+}
+function shuffle() {
+    console.log("Drawing a new card from the deck!")
+    sum+= newCard
+    cardsEl.textContent= "Cards: "+ cards[0] + " + " +cards[1] + " + " + cards[2]
+    sumEl.textContent= "Sum: " + sum
+    
+    if(sum<=20) {
+        message="Do you want to draw a new card?"
+    }
+    else if (sum=== 21) {
+        message="Wohoo! You've got a Blackjack!"
+         hasBlackJack= true
+    }
+    else  {
+        message= "You're out of the game!"
+        isAlive= false
+    }
+    messageEl.textContent= message
+}
+
+
 
 /*console.log(4===3)
 console.log(4<3)
@@ -187,3 +224,25 @@ else if(age=== 100) {
 else {
     console.log("Not eligible, you've already gotten one")
 }*/
+
+//Array
+/*let profile = ["2 yrs", "Bachelor", "Tally", "Computer"]
+console.log( profile[1] )
+console.log(profile[3])
+console.log(profile[0])*/
+
+//for loop
+/*for(let i= 10; i<101; i+= 10) {
+console.log(i)}*/
+
+//for loop arrays
+/*let bimal=[7,3,9, 11]
+for(let i=0; i< bimal.length; i++){
+    console.log(bimal[i])}*/
+
+let sentence=["Hello", "my", "name", "is", "Bimal."]
+let greetingEl= document.getElementById("greeting-el")
+for(let i=0; i< sentence.length; i++){
+   // console.log(sentence[i])
+    greetingEl.textContent+= sentence[i]+ " " // " " is for spacing after each words.
+}
