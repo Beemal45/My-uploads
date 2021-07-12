@@ -143,27 +143,48 @@ function divide() {
     console.log(division)
 }*/
 
-let firstCard= 6
-let secondCard= 11
-let sum= firstCard+ secondCard
-let isAlive= true
+let firstCard= 0
+let secondCard= 0
+let sum= 0
+let isAlive= false
 let hasBlackJack= false
 let message= " "
 let messageEl= document.getElementById("message-el")
 let sumEl= document.getElementById("sum-el")
 let cardsEl= document.getElementById("cards-el")
-let newCard= 5
-let cards=[ firstCard, secondCard]
-cards.push(newCard)
+let cards=[firstCard, secondCard]
+//console.log(cards)
 
+function getRandomCard(){
+    let randomCard= Math.floor(Math.random()*13)+1
+   // return randomCard
+    if(randomCard===1){
+        return 11
+    }
+        else if(randomCard> 10){
+            return 10
+    }
+    else {
+        return randomCard
+    }
+}
 function startGame() {
-  renderGame()
+isAlive= true
+firstCard= getRandomCard()
+secondCard= getRandomCard()
+ cards= [firstCard, secondCard]
+ sum= firstCard + secondCard
+renderGame()
 }
 
 function renderGame() {
-
+    cardsEl.textContent= "Cards: " 
+for(let i=0; i<cards.length; i+=1){
+    cardsEl.textContent+= cards[i] +" " + "|" 
+}
  if(sum<=20) {
     message="Do you want to draw a new card?"
+    isAlive= true
 }
 else if (sum=== 21) {
     message="Wohoo! You've got a Blackjack!"
@@ -173,29 +194,34 @@ else  {
     message= "You're out of the game!"
     isAlive= false
 }
-cardsEl.textContent= "Cards: " + cards[0] + " + " + cards[1]
+
 messageEl.textContent= message
 sumEl.textContent= "Sum: " + sum
 }
 function shuffle() {
-    console.log("Drawing a new card from the deck!")
+    let newCard= getRandomCard()
+    //console.log("Drawing a new card from the deck!")
+    //console.log(cards)
     sum+= newCard
-    cardsEl.textContent= "Cards: "+ cards[0] + " + " +cards[1] + " + " + cards[2]
-    sumEl.textContent= "Sum: " + sum
-    
-    if(sum<=20) {
-        message="Do you want to draw a new card?"
-    }
-    else if (sum=== 21) {
-        message="Wohoo! You've got a Blackjack!"
-         hasBlackJack= true
-    }
-    else  {
-        message= "You're out of the game!"
-        isAlive= false
-    }
-    messageEl.textContent= message
+    cards.push(newCard)
+    renderGame()
 }
+
+//returning values in functions
+/*let lap1Time= 102
+let lap2Time= 107
+function totalRaceTime(){
+    return lap1Time +lap2Time
+}
+let raceTime= totalRaceTime()
+    
+    console.log(raceTime)*/
+
+    
+   
+    
+    
+
 
 
 
@@ -240,9 +266,19 @@ console.log(i)}*/
 for(let i=0; i< bimal.length; i++){
     console.log(bimal[i])}*/
 
-let sentence=["Hello", "my", "name", "is", "Bimal."]
+/*let sentence=["Hello", "my", "name", "is", "Bimal."]
 let greetingEl= document.getElementById("greeting-el")
 for(let i=0; i< sentence.length; i++){
    // console.log(sentence[i])
     greetingEl.textContent+= sentence[i]+ " " // " " is for spacing after each words.
+}*/
+
+//generating random numbers
+/*let randomNumber= Math.floor(Math.random()*6) + 1
+console.log(randomNumber)*/
+
+/*function rollDice(){
+    let  randomNumber= Math.floor(Math.random()*6) + 1
+  return randomNumber
 }
+console.log(rollDice())*/
