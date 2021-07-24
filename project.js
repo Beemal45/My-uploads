@@ -45,13 +45,14 @@ console.log(lapsCompleted)*/
 let countHere = document.getElementById("count-here")
 let saveEl= document.getElementById("save-el")
 
+
 //console.log(countHere)
 
 let count= 0
 function increment() {
     count+= 1
     countHere.innerText= count
-    console.log(count)
+    //console.log(count)
     }
     
 function save() {
@@ -145,19 +146,28 @@ function divide() {
 
 let firstCard= 0
 let secondCard= 0
-let sum= 0
+let sum= firstCard + secondCard
 let isAlive= false
 let hasBlackJack= false
-let message= " "
+let message= " Do you want to play a round?"
 let messageEl= document.getElementById("message-el")
 let sumEl= document.getElementById("sum-el")
 let cardsEl= document.getElementById("cards-el")
+let nextRoundEl= document.getElementById("next-round")
 let cards=[firstCard, secondCard]
+let playerCoins= 1000 
 //console.log(cards)
+//console.log(sum)
+let player= {
+    name: "Bimal",
+    chips: "Rs." + playerCoins
+}
+let playerEl= document.getElementById("player-el")
+playerEl.textContent= player.name +": " + player.chips
 
 function getRandomCard(){
     let randomCard= Math.floor(Math.random()*13)+1
-   // return randomCard
+    // return randomCard
     if(randomCard===1){
         return 11
     }
@@ -185,27 +195,66 @@ for(let i=0; i<cards.length; i+=1){
  if(sum<=20) {
     message="Do you want to draw a new card?"
     isAlive= true
+    
 }
 else if (sum=== 21) {
-    message="Wohoo! You've got a Blackjack!"
+    message="You've got a Blackjack!"
      hasBlackJack= true
+     playerCoins+=30
 }
 else  {
-    message= "You're out of the game!"
+    message= "Game Over! Play next round?"
     isAlive= false
+    playerCoins-= 10
 }
 
 messageEl.textContent= message
 sumEl.textContent= "Sum: " + sum
+playerEl.textContent= player.name+": "+ "Rs."+playerCoins
+console.log(player.chips)
 }
 function shuffle() {
+    if (isAlive=== true && hasBlackJack=== false){
     let newCard= getRandomCard()
     //console.log("Drawing a new card from the deck!")
     //console.log(cards)
     sum+= newCard
     cards.push(newCard)
     renderGame()
+    }
+    console.log(sum)
 }
+ function nextRound(){
+     //firstCard= 0
+     //secondCard= 0
+     //cards=[firstCard, secondCard]
+     //sum= firstCard + secondCard
+     getRandomCard() 
+     startGame()
+     isAlive= true
+     hasBlackJack= false
+ }
+ 
+
+/*function playerCoins() {
+    playerEl.textContent= player.name  
+for(let i=0; i<cards.length; i+=40){
+    cardsEl.textContent+= cards[i] +" " + "|" 
+}
+ if(sum<=20) {
+    message="Do you want to draw a new card?"
+    isAlive= true
+}
+else if (sum=== 21) {
+    message="You've got a Blackjack!"
+     hasBlackJack= true
+}
+else  {
+    message= "Game Over!"
+    isAlive= false
+}
+}*/
+
 
 //returning values in functions
 /*let lap1Time= 102
@@ -282,3 +331,47 @@ console.log(randomNumber)*/
   return randomNumber
 }
 console.log(rollDice())*/
+
+//Logical AND Operator
+/*let hasSolvedChallenge= false
+let hasHintsLeft= false
+
+if (hasSolvedChallenge=== false && hasHintsLeft=== false){
+    showSolution()
+}
+function showSolution(){
+    console.log("showing the solution...")
+}*/
+
+//OR operator
+/*let likesDocumentaries= false
+let likesStartUps= true
+if(likesDocumentaries=== true || likesStartUps=== true){
+    recommendMovie()
+}
+function recommendMovie(){
+    console.log("Watch this movie.")
+}*/
+
+//Objects
+/*let castle ={
+    rooms: 5,
+    wall: "Made up of old stones",
+    isClean: true,
+    surrounding: ["sea", "garden", "parking", 2]
+}
+console.log(castle["wall"]) //alternative way 
+console.log(castle.surrounding)
+console.log(castle.isClean)
+console.log(castle.rooms)*/
+
+//recap object and function
+/*let person= {
+    name: "Bimal", 
+    age: 24, 
+    country: "Nepal"
+}
+function logData() {
+    console.log(person.name + " is " + person.age + " years old and lives in" + person.country )
+}
+logData()*/
