@@ -375,3 +375,33 @@ function logData() {
     console.log(person.name + " is " + person.age + " years old and lives in" + person.country )
 }
 logData()*/
+
+//Array
+/*let largeCountries= ["China", "India", "USA", "Indonesia", "Pakistan"]
+console.log("The 5 largest countries in the world:")
+for(let i=0; i< largeCountries.length; i++){
+    console.log("- "+largeCountries[i])
+}*/
+
+//push, pop, shift, unshift
+/*let largeCountries= ["Tuvalo", "India", "USA", "Indonesia","Monaco"]
+largeCountries.pop() //removes the last item of an array
+largeCountries.push("Pakistan")//adds an item to the end of an array
+largeCountries.shift() //removes the first item of an array
+largeCountries.unshift("China") //adds the first item in an array
+console.log(largeCountries)*/
+
+//LOGICAL OPERATORS
+/*let dayOfMonth= 13
+let weekDay= "Friday"
+  if(dayOfMonth=== 13 && weekDay==="Friday"){
+      console.log("U+1F625")
+  }*/
+
+  //Math.random
+  /*let hands=["rock", "paper", "Scissor"]
+  function getHand(){
+      let randomIndex= Math.floor(Math.random() * 3)
+      return hands[randomIndex]
+  }
+  console.log(getHand() )*/
